@@ -1,0 +1,17 @@
+#pragma once
+
+enum RACE { HUMAN, ELF, DARKELF, ANGEL, MONGREL, SHAMANI, NIBELUNG, UNDEAD };
+enum OCC { FIGHTER, CLERIC, ROGUE, BARD, TINKER, MAGE, VAMPIRE };
+enum LOCATION { QUIT, TOWN, FOREST, VIEWSTATS, MONSTER, ARMORSMITH, BUYARMOR, SELLARMOR, WEAPONSMITH, BUYWEAPON, SELLWEAPON, ALCHEMIST, BUYPOTION, MENU };
+enum WEAPON { FISTS, DAGGER, STAFF, SWORD, ANCIENTBLADE, MAGICBLADE, ARCANEBLADE };
+enum ARMOR { LOINCLOTH, CLOTH, LEATHER, CHAIN, PLATE, ANCIENTPLATE, MAGICPLATE, ARCANEPLATE };
+
+struct attributes
+{
+	unsigned int strength;
+	unsigned int faith;
+	unsigned int dexterity;
+	unsigned int inspiration;
+	unsigned int cleverness;
+	unsigned int focus;
+};
