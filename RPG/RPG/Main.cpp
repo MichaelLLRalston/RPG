@@ -62,6 +62,15 @@ int main()
 		case SELLWEAPON:
 			Player1->LocSellWeapon();
 			break;
+		case ALCHEMIST:
+			Player1->LocAlchemist();
+			break;
+		case BUYPOTION:
+			Player1->LocBuyPotion();
+			break;
+		case SELLPOTION:
+			Player1->LocSellPotion();
+			break;
 		}
 	}
 	return 0;

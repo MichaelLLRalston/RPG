@@ -22,6 +22,7 @@ protected:
 	LOCATION location;
 	WEAPON Weapon;
 	ARMOR Armor;
+	POTION Potion;
 	int masteries;
 public:
 	// Constructors
@@ -219,6 +220,7 @@ public:
 				break;
 			case '4':
 				location = WEAPONSMITH;
+				break;
 			case '5':
 				location = QUIT;
 				break;
@@ -352,6 +354,39 @@ public:
 		}
 
 	}
+	void LocAlchemist()
+	{
+		bool reroll = true;
+		char menuitem;
+		while (reroll)
+		{
+			reroll = false;
+			cout << "\n You enter a smal hut billowing with smoke \n there are many brews around the room \n the shop keep asks 'What do you want deary?'";
+
+			cout << "\n[1] Buy Potion\t\t [3] Leave the shop";
+			cout << "\n[2] Sell Potion\n";
+			cin >> menuitem;
+			switch (menuitem)
+			{
+			case '1':
+				location = BUYPOTION;
+				break;
+			case '2':
+				location = SELLPOTION;
+				break;
+			case '3':
+				location = FOREST;
+				break;
+
+			default:
+				cout << "Invalid entry please try again!" << endl;
+				reroll = true;
+				break;
+			}
+		}
+
+	}
+
 	void LocBuyWeapon()
 	{
 		bool reroll = true;
@@ -683,6 +718,18 @@ public:
 		}
 		location = ARMORSMITH;
 	}
+
+	// COMPLETE THESE AFTER POTIONS IN INVENTORY
+	void LocBuyPotion()
+	{
+
+	}
+	void LocSellPotion()
+	{
+
+	}
+
+
 };
 class Fighter : public Character
 {
