@@ -68,9 +68,6 @@ int main()
 		case BUYPOTION:
 			Player1->LocBuyPotion();
 			break;
-		case SELLPOTION:
-			Player1->LocSellPotion();
-			break;
 		}
 	}
 	return 0;

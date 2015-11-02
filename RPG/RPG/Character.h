@@ -363,8 +363,7 @@ public:
 			reroll = false;
 			cout << "\n You enter a small hut billowing with smoke \n there are many brews around the room \n the shop keep asks 'What do you want deary?'";
 
-			cout << "\n[1] Buy Potion\t\t [3] Leave the shop";
-			cout << "\n[2] Sell Potion\n";
+			cout << "\n [1] Buy Potion \t\t [2] Leave the shop";
 			cin >> menuitem;
 			switch (menuitem)
 			{
@@ -372,9 +371,6 @@ public:
 				location = BUYPOTION;
 				break;
 			case '2':
-				location = SELLPOTION;
-				break;
-			case '3':
 				location = FOREST;
 				break;
 
@@ -719,18 +715,73 @@ public:
 		location = ARMORSMITH;
 	}
 
-	// COMPLETE THESE AFTER POTIONS IN INVENTORY
+
 	void LocBuyPotion()
 	{
+		bool reroll = true;
+		bool nosale = false;
+		int menuitem;
+		while (reroll)
+		{
+			reroll = false;
+			cout << "\n Along The Potions you decide...";
+			cout << "\n [1] Health Potion \t\t [2] Mana Potion";
+			cout << "\n [3] Leave the Shop";
+			cin >> menuitem;
+			switch (menuitem)
+			{
+			case 1:
+				if (copper >= 100)
+				{
+					cout << "\n you buy Health Pot for 100 copper \n you recieve 15 Hp";
+					Potion = HEALTH;
+					copper -= 100;
+					hp += 15;
+					if (hp > hpmax)
+					{
+						hp = hpmax;
+					}
+					cout << "you have" << copper << " copper" << endl;
+					cout << "you have" << hp << "/ " << hpmax << "health";
+				}
+				else
+				{
+					nosale = true;
+				}
+				break;
+			case 2:
+				if (copper >= 100)
+				{
+					cout << "\n you buy Mana Pot for 100 copper \n you recieve 5 Mana";
+					Potion = MANA;
+					copper -= 100;
+					mp += 5;
+					if (mp > mpmax)
+					{
+						mp = mpmax;
+					}
+					cout << "you have" << copper << " copper" << endl;
+					cout << "you have" << mp << "/ " << mpmax << "Mana";
+				}
+				else
+				{
+					nosale = true;
+				}
+				break;
+			default:
+				reroll = true;
+				break;
 
+			}
+		}
+		if (nosale)
+		{
+			cout << "You are too poor for that";
+		}
+		location = ALCHEMIST;
 	}
-	void LocSellPotion()
-	{
-
-	}
-
-
 };
+
 class Fighter : public Character
 {
 public:
