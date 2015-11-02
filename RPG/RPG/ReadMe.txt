@@ -1,40 +1,38 @@
-========================================================================
-    CONSOLE APPLICATION : RPG Project Overview
-========================================================================
+Welcome to michael's RPG!!!! Allow me to explain some things, Read the text to understand whats going on and follow the corresponding keys to the actions you want to make.
+This is simply a "beat 'em up until you die" kind of game, currently. each race you take has its benefits and downfalls as i will explain below. With that, each class has 
+specific modifiers to their higher up attacks (2 and 3). My special class (vampire) has the trade out of lower dmg but you can heal off of hits from your higher attacks.
 
-AppWizard has created this RPG application for you.
+NOW ON TO RACES AND CLASSES:
 
-This file contains a summary of what you will find in each of the files that
-make up your RPG application.
+	Races!!!!
 
+Human: no downfall but no increase
 
-RPG.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
+Elf: Lower cleverness, higher Focus
 
-RPG.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
+DarkElf: Lower Inspiration, Higher Dexterity
 
-RPG.cpp
-    This is the main application source file.
+Angle/Demon:Lower Inspiration, Higher Faith
 
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
+Mongrel:Lower Focus, Higher Strength
 
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named RPG.pch and a precompiled types file named StdAfx.obj.
+Shamani: Lower strength, Higher Faith
 
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
+Nibelung:Lower Dexterity, Higher Cleverness
 
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
+Undead: Lower Cleverness, Higher Dexterity
 
-/////////////////////////////////////////////////////////////////////////////
+	Classes!!!!
+Fighter(strength based): Hp 10-60 || mp 20 || Leather armor and a sword
+	Basic Attack = weak basic swing of the sword
+	Frenzy = double the dmg basic attack wouldve done
+	Deadly Strike = If something lives being hit by this welllllll you should run
+Cleric (focus and faith based): hp 5-30 || mp 50 || Cloth armor and a staff
+	Basic Attack = weak basic swing of the sword
+	Magic missile = double the dmg of your basic attack with strength mod replaced by faith mod
+	Heal = replenish a tiny amount of health ( more than likely no more them 6)
+Rogue (Dexterity based): hp 6-36 || mp 20 || Leather armor and a dagger
+	Basic Attack = weak basic swing of the sword
+	Dagger throw = Basic attack mod by dexterity multpilied by 1.5
+	Backstab = Dagger throw times 25
+Bard ()

@@ -715,7 +715,6 @@ public:
 		location = ARMORSMITH;
 	}
 
-
 	void LocBuyPotion()
 	{
 		bool reroll = true;
@@ -733,7 +732,7 @@ public:
 			case 1:
 				if (copper >= 100)
 				{
-					cout << "\n you buy Health Pot for 100 copper \n you recieve 15 Hp";
+					cout << "\n you buy Health Pot for 100 copper \n you recieve 15 Hp. ";
 					Potion = HEALTH;
 					copper -= 100;
 					hp += 15;
@@ -741,8 +740,8 @@ public:
 					{
 						hp = hpmax;
 					}
-					cout << "you have" << copper << " copper" << endl;
-					cout << "you have" << hp << "/ " << hpmax << "health";
+					cout << "you have " << copper << " copper" << endl;
+					cout << "you have " << hp << " / " << hpmax << " health";
 				}
 				else
 				{
@@ -760,8 +759,8 @@ public:
 					{
 						mp = mpmax;
 					}
-					cout << "you have" << copper << " copper" << endl;
-					cout << "you have" << mp << "/ " << mpmax << "Mana";
+					cout << "you have " << copper << " copper" << endl;
+					cout << "you have " << mp << " / " << mpmax << " Mana";
 				}
 				else
 				{

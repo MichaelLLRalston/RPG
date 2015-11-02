@@ -1,9 +1,11 @@
 #include "Character.h"
 
+#include <fstream>
 #include <iostream>
 
-using namespace std;
-
+using std::cin;
+using std::cout;
+using std::fstream;
 
 void makeCharacter(Character *& player)
 {
@@ -12,14 +14,25 @@ void makeCharacter(Character *& player)
 	RACE inputRace;
 	OCC inputClass;
 	attributes tmpStats;
+	fstream file;
 
 	while (reroll == true)
 	{
+
 		cout << "Please select a race";
 		cout << "[H]uman [E]lf [D]ark Elf [A]ngel/Demon\n[M]ongrel [S]hamani [N]ibelung [U]ndead\n";
+		cout << "\nView Readme? [1]";
+
 		cin >> inputs;
+		
 		switch (inputs)
 		{
+		case '1':
+			file.open("ReadMe.txt", ios_base::in);
+			char buffer[10000];
+			file.get(buffer, 10000);
+			cout << buffer;
+			break;
 		case 'h':
 		case 'H':
 			cout << "You have chosen the human class";
@@ -60,7 +73,7 @@ void makeCharacter(Character *& player)
 			tmpStats.strength = DiceRoll(3, 6);
 			tmpStats.faith = DiceRoll(4, 6);
 			tmpStats.dexterity = DiceRoll(3, 6);
-			tmpStats.inspiration = DiceRoll(3, 6);
+			tmpStats.inspiration = DiceRoll(2, 6);
 			tmpStats.cleverness = DiceRoll(3, 6);
 			tmpStats.focus = DiceRoll(3, 6);
 			break;
@@ -103,7 +116,7 @@ void makeCharacter(Character *& player)
 			inputRace = UNDEAD;
 			tmpStats.strength = DiceRoll(3, 6);
 			tmpStats.faith = DiceRoll(3, 6);
-			tmpStats.dexterity = DiceRoll(3, 6);
+			tmpStats.dexterity = DiceRoll(4, 6);
 			tmpStats.inspiration = DiceRoll(3, 6);
 			tmpStats.cleverness = DiceRoll(2, 6);
 			tmpStats.focus = DiceRoll(3, 6);
