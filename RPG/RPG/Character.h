@@ -361,7 +361,7 @@ public:
 		while (reroll)
 		{
 			reroll = false;
-			cout << "\n You enter a smal hut billowing with smoke \n there are many brews around the room \n the shop keep asks 'What do you want deary?'";
+			cout << "\n You enter a small hut billowing with smoke \n there are many brews around the room \n the shop keep asks 'What do you want deary?'";
 
 			cout << "\n[1] Buy Potion\t\t [3] Leave the shop";
 			cout << "\n[2] Sell Potion\n";
